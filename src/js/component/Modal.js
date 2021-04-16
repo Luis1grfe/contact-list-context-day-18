@@ -38,16 +38,20 @@ export const Modal = props => {
 						</p>
 					</div>
 					<div className="modal-footer">
-						<button type="button" className="btn btn-primary">
+						<button
+							type="button"
+							className="btn btn-primary"
+							onClick={() => props.onClose()}>
 							Oh no!
 						</button>
 						<button
 							type="button"
 							className="btn btn-secondary"
 							data-dismiss="modal"
-							onClick={() =>
-								actions.handleDelete(store.contact_id)
-							}>
+							onClick={() => {
+								actions.handleDelete(store.contact_id);
+								props.onClose();
+							}}>
 							Do it!
 						</button>
 					</div>

@@ -102,6 +102,7 @@ const getState = ({ getStore, setStore }) => {
 					.then(resp => resp.json())
 					.then(data => console.log(data))
 					.catch(error => console.log(error));
+				//window.location.reload();
 			},
 			handleAdd: e => {
 				const store = getStore();

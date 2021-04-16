@@ -30,17 +30,6 @@ export const ContactCard = props => {
 									actions.handleID(props.id)
 								}></Link>
 						</button>
-
-						<button className="btn">
-							<Link
-								className="fas fa-pencil-alt mr-3"
-								to="/edit"
-								onClick={() => {
-									actions.handleID(props.id);
-									actions.handlePrueba();
-								}}></Link>
-						</button>
-
 						<button
 							className="btn"
 							value={props.id}
