@@ -51,6 +51,9 @@ export const Modal = props => {
 							onClick={() => {
 								actions.handleDelete(store.contact_id);
 								props.onClose();
+								setTimeout(() => {
+									window.location.reload(1);
+								}, 2000);
 							}}>
 							Do it!
 						</button>

@@ -100,10 +100,10 @@ const getState = ({ getStore, setStore }) => {
 					}
 				)
 					.then(resp => resp.json())
-					.then(data => console.log(data))
+					.then(data => console.log("prueba " + data.msg))
 					.catch(error => console.log(error));
-				//window.location.reload();
 			},
+
 			handleAdd: e => {
 				const store = getStore();
 				const {
@@ -139,13 +139,6 @@ const getState = ({ getStore, setStore }) => {
 				);
 				fetch("https://assets.breatheco.de/apis/fake/contact/", {
 					method: "POST",
-					/*body: JSON.stringify({
-						full_name: "prueba desde el code",
-						email: "code@fake.cl",
-						agenda_slug: "agenda_luis1grfe",
-						address: "California 5678",
-						phone: "66667777"
-                    }),*/
 					body: JSON.stringify({
 						full_name: full_name,
 						email: email,
@@ -154,7 +147,6 @@ const getState = ({ getStore, setStore }) => {
 						phone: phone
 					}),
 					mode: "cors",
-					/*header: { Accept: "application/json", "Content-Type": "application/json" }*/
 					headers: new Headers({
 						"Content-Type": "application/json"
 					})
